@@ -6,9 +6,13 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 16:08:10 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 17:54:33 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 20:23:37 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+printing character test (space character inclusive)
+*/
 
 int	ft_isprint(int c)
 {

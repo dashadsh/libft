@@ -6,9 +6,15 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 16:07:54 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 16:27:53 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 20:22:11 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+test for ASCII character
+
+tests for an ASCII character, which is any character between 0 and octal 0177 inclusive.
+*/
 
 int	ft_isascii(int c)
 {

@@ -6,15 +6,18 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 13:50:24 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 16:27:19 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 20:20:36 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-The calloc() function allocates enough space for count objects 
-that are size bytes of memory each.
+memory allocation
+
+Allocates enough space for count objects that are size bytes of memory each.
+
 Returns a pointer to the allocated memory. 
 The allocated memory is filled with bytes of value zero.
+function erases n bytes of memory starting at location pointed to by s.
 */
 
 #include "libft.h"
@@ -38,12 +41,10 @@ void	*ft_calloc(size_t count, size_t size)
 int	main(void)
 
 {
-	int	amount;
+	int	amount = 5;
 	int	*ptr;
-	int	i;
+	int	i = 0;
 
-	amount = 5;
-	i = 0;
 	ptr = (int *)ft_calloc(amount, sizeof(int));
 	while (i < amount)
 		printf("%d ", ptr[i++]);

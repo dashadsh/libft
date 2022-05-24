@@ -6,9 +6,13 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 16:08:04 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 17:52:49 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 20:22:53 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+decimal-digit character test
+*/
 
 int	ft_isdigit(int c)
 {

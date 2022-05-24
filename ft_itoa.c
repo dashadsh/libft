@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 12:04:20 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/23 19:12:55 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 20:25:25 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,12 @@ char	*ft_itoa(int n)
 		casted_n = casted_n / 10;
 	}
 	return (str);
+}
+
+#include <stdio.h>
+
+int main(void)
+{
+	
+	return (0);
 }

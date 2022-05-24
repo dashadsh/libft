@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 14:46:24 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 16:28:12 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 20:12:08 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,3 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst; 
 	*lst = new;
 }
-
-/*
-disconnect and reconnect
-*/

@@ -6,13 +6,14 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 16:07:38 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 17:49:46 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 20:20:48 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-isalnum – alphanumeric character test,
-tests for any character for which isalpha(3) or isdigit(3) is true
+alphanumeric character test
+
+Tests for any character for which isalpha(3) or isdigit(3) is true
 */
  
 #include "libft.h"

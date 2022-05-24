@@ -6,12 +6,15 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 16:07:07 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 18:13:08 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 20:19:32 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 convert ASCII string to integer
+
+Converts the initial portion of the string 
+pointed to by str to int representation.
 */
 
 #include "libft.h"

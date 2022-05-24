@@ -6,9 +6,15 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 16:07:47 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 17:51:37 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 20:21:37 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+alphabetic character test
+
+Tests for any character for which isupper(3) or islower(3) is true.
+*/
 
 int	ft_isalpha(int c)
 {

@@ -6,9 +6,13 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 16:43:31 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/17 15:29:07 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 19:31:55 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* function allocates (with malloc())) and returns a copy of ’s1’ with the
+characters specified in ’set’ removed from the beginning and the end of 
+the string */
 
 #include "libft.h"
 
@@ -64,20 +68,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(trimmed, s1 + start, end - start + 1);
 	return (trimmed);
 }
-/*
-char	*ft_strtrim(char const *s1, char const *set)
-{	
-	size_t	i;
 
-	if (!s1 || !set)
-		return (NULL);
-	while (*s1 && ft_strchr(set, *s1))
-		s1++;
-	i = ft_strlen(s1);
-	while (i >= 0 && ft_strchr(set, s1[i]))
-		i--;
-	return (ft_substr(s1, 0, i + 1));
-}
 
 #include <stdio.h>
 
@@ -92,4 +83,3 @@ int main()
 	printf ("%s\n", ft_strtrim(string2, del2));
 	return (0);
 }
-*/

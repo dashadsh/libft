@@ -6,7 +6,7 @@
 #    By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 17:22:34 by dgoremyk          #+#    #+#              #
-#    Updated: 2022/05/24 16:34:35 by dgoremyk         ###   ########.fr        #
+#    Updated: 2022/05/24 18:45:02 by dgoremyk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,7 @@ bonus: $(BONUS_OBJS)
 # https://www.gnu.org/software/make/manual/make.html#Pattern-Match
 %.o: %.c
 	$(CC) -c $(CFLAGS) $< -o $@
-		
+
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJS)
 
