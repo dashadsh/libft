@@ -6,9 +6,15 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 16:07:07 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 16:27:28 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 18:13:08 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+convert ASCII string to integer
+*/
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -36,13 +42,15 @@ int	ft_atoi(const char *str)
 
 /*
 #include <stdio.h>
-#include <string.h> 
+#include <stdlib.h>
+
 int	main(void)
 {
-	char dest[8];
-	strcpy(dest, "-a12345");
-	printf("%s\n", dest);
-	printf ("%d\n", ft_atoi(dest));
+	printf("Test: 123\t atoi: %d\t ft_atoi: %d\n", atoi("123"), ft_atoi("123"));
+	printf("Test: -2147483648\t atoi: %d\t ft_atoi: %d\n", atoi("-2147483648"), ft_atoi("-2147483648"));
+	printf("Test: 0\t atoi: %d\t ft_atoi: %d\n", atoi("0"), ft_atoi("0"));
+	printf("Test:  	-789\t atoi: %d\t ft_atoi: %d\n", atoi(" 	-789"), ft_atoi(" 	-789"));
+	printf("Test: 	-+--789\t atoi: %d\t ft_atoi: %d\n", atoi(" 	-+--789"), ft_atoi(" 	-+--789"));
 	return (0);
 }
 */

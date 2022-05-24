@@ -6,10 +6,15 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 16:07:38 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 00:28:32 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 17:49:46 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+isalnum – alphanumeric character test,
+tests for any character for which isalpha(3) or isdigit(3) is true
+*/
+ 
 #include "libft.h"
 
 int	ft_isalnum(int c)
@@ -18,18 +23,17 @@ int	ft_isalnum(int c)
 }
 
 /*
+#include <ctype.h>
 #include <stdio.h>
 
-int main()
+int	main(void)
 {
-	char	c;
-
-	c = '1';
-	printf("The result is %d\n", ft_isalnum(c));
-	c = 'g';
-	printf("The result is %d\n", ft_isalnum(c));
-	c = '!';
-	printf("The result is %d\n", ft_isalnum(c));
+	printf("Test: 'a'\tOriginal: %d\tMy function: %d\n", isalnum('a'), ft_isalnum('a'));
+	printf("Test: 'z'\tOriginal: %d\tMy function: %d\n", isalnum('z'), ft_isalnum('z'));
+	printf("Test: '0'\tOriginal: %d\tMy function: %d\n", isalnum('0'), ft_isalnum('0'));
+	printf("Test: '\t'\tOriginal: %d\tMy function: %d\n", isalnum('\t'), ft_isalnum('\t'));
+	printf("Test: -1\tOriginal: %d\tMy function: %d\n", isalnum(-1), ft_isalnum(-1));
+	printf("Test: 256\tOriginal: %d\tMy function: %d\n", isalnum(256), ft_isalnum(256));
 	return (0);
 }
 */
