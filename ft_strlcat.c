@@ -6,9 +6,27 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 17:06:53 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 16:30:15 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 00:34:47 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+size-bounded string concatenation
+
+take the full size of the destination buffer and guarantee NUL-
+termination if there is room.  Note that room for the NUL 
+should be included in dstsize.
+
+appends string src to the end of dst.  It will append at most dstsize -
+strlen(dst) - 1 characters.  It will then NUL-terminate, unless dstsize is 0 or the
+original dst string was longer than dstsize (in practice this should not happen as it
+means that either dstsize is incorrect or that dst is not a proper string).
+
+If the src and dst strings overlap, the behavior is undefined.
+
+RETURNS the total length of the string tried to create,
+that means the initial length of dst plus the length of src
+*/
 
 #include "libft.h"
 
@@ -29,3 +47,20 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dstlen + i] = '\0';
 	return (ft_strlen(src) + dstlen);
 }
+
+/*
+#include <string.h>
+#include <stdio.h>
+
+int main()
+{
+    char	dst[9] = "moog";
+	char	src[] = "music";
+    size_t n = 2;
+	//size_t origin = strlcpy(dst, src, n);
+	//size_t custom = ft_strlcpy(dst, src, n);
+	printf("strlcat: %lu\n", strlcat(dst, src, n));
+	printf("ft_strlcat: %zu\n", ft_strlcat(dst, src, n));
+	printf("%s", dst);
+}
+*/

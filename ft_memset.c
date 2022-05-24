@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 16:08:17 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 21:38:28 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 23:43:06 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ void	*ft_memset(void *b, int c, size_t len)
 	int main (void)
 	{
 		char str[11] = "nnnnnOOOOO"; // *str brings bzs error
-		printf("memset: %s\tft_memset: %s\n", (char *)memset(str, 'X', 5), (char *)ft_memset(str, 'X', 5));
+		printf("memset: %s\tft_memset: %s\n", (char *)memset(str, 'X', 5), 
+		(char *)ft_memset(str, 'X', 5));
 		return(0);
 	}
 */

@@ -6,12 +6,14 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 17:10:17 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 18:57:31 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 00:52:49 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-The strchr() function locates the first occurrence of c (converted to a char) 
+locate character in string
+
+locates the first occurrence of c (converted to a char) 
 in the string pointed to by s.
 The terminating null character is considered to be part of the string;
 therefore if c is ‘\0’, the functions locate the terminating ‘\0’.
@@ -34,6 +36,23 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
+/*
+#include <stdio.h>
+#include <string.h>
+
+int	main(void)
+{
+	char	str[] = "Goodbye, this cruel world!";
+	printf("strchr: %p\t ft_strchr: %p\n", 
+	strchr(str, 'd'), ft_strchr(str, 'd'));
+	printf("strchr: %p\t\t ft_strchr: %p\n", 
+	strchr(str, 'x'), ft_strchr(str, 'x'));
+	printf("strchr: %p\t ft_strchr: %p\n", 
+	strchr(str, 'G'), ft_strchr(str, 'G'));
+	return (0);
+}
+*/
+
 /* BROKEN
 char	*ft_strchr(const char *s, int c)
 {
@@ -42,20 +61,5 @@ char	*ft_strchr(const char *s, int c)
 	if (*s == c)
 		return ((char *)s);
 	return (0);
-}
-*/
-/*
-#include <stdio.h>
-
-int main () {
-   const char str[] = "http://www.tutorialspoint.com";
-   const char ch = '.';
-   char *ret;
-
-   ret = strchr(str, ch);
-
-   printf("String after |%c| is - |%s|\n", ch, ret);
-   
-   return(0);
 }
 */

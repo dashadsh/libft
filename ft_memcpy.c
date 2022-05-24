@@ -15,7 +15,8 @@ Copy memory area
 
 Copies n bytes from memory area src to memory area dst.
 If dst and src overlap, behavior is undefined.
-Applications in which dst and src might overlap should use memmove(3) instead.
+Applications in which dst and src might overlap should use 
+memmove(3) instead.
 
 Returns the original value of dst
 */
@@ -46,7 +47,8 @@ int main()
 	char src[] = "XXXXXXXOOO";
 	size_t i = 3;
 
-	printf("memcpy: %p\tft_memcpy: %p\n", memcpy(dst, src, i), ft_memcpy(dst, src, i));
+	printf("memcpy: %p\tft_memcpy: %p\n", 
+	memcpy(dst, src, i), ft_memcpy(dst, src, i));
 
 	char *origin = memcpy(dst, src, i);
 	printf("string after memcpy: %s\n", origin);

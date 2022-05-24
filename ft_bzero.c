@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 14:54:55 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 21:52:38 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 23:40:21 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,16 @@ int	main()
 	printf("\n");
 	
 	printf("remaining string after bzero:\n");
-	printf("%s\n", origin + 2); 					// ("%s", str) doesn't show anything because
-													// setting even just the first `char` in the array to 0
-	printf("remaining string after ft_bzero:\n");	// results in an empty string.
+	printf("%s\n", origin + 2);
+	
+	printf("remaining string after ft_bzero:\n");
 	printf("%s\n", custom + 2);
 	return (0);
 }
+*/
+
+/* 
+in main() ("%s", str) doesn't show anything because
+setting even just the first `char` in the array to 0
+results in an empty string.
 */

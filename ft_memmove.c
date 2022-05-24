@@ -6,14 +6,15 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 15:19:51 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 22:30:56 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 23:46:15 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 Copy byte string
 
-Function copies len bytes from string src to string dst. The two strings may overlap; 
+Function copies len bytes from string src to string dst. 
+The two strings may overlap; 
 the copy is always done in a non-destructive manner.
 
 If (src < dst) copy from back to front or
@@ -48,11 +49,11 @@ int main()
 	char src[] = "abcdefgah";
 	size_t i = 3;
 
-	printf("memmove: %p\tft_memmove: %p\n", memmove(dst, src, i), ft_memmove(dst, src, i));
+	printf("memmove: %p\tft_memmove: %p\n", memmove(dst, src, i), 
+	ft_memmove(dst, src, i));
 
 	char *origin = memmove(dst, src, i);
 	printf("string after memmove: %s\n", origin);
-
 
 	char *custom = ft_memmove(dst, src, i);
 	printf("string after ft_memmove: %s\n", custom);

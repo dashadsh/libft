@@ -6,16 +6,18 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 17:42:15 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 20:48:16 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 00:51:56 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 locate byte in byte string
 
-Locates the first occurrence of c (converted to an unsigned char) in string s.
+Locates the first occurrence of c (converted to an unsigned char) 
+in string s.
 
-Returns a pointer to the byte located, or NULL if no such byte exists within n bytes.
+Returns a pointer to the byte located, or NULL if no such byte 
+exists within n bytes.
 */
 
 #include "libft.h"
@@ -41,9 +43,12 @@ void	*ft_memchr(const void *s, int c, size_t n)
 int	main(void)
 {
 	char	str[] = "Goodbye, this cruel world!";
-	printf("memchr: %p\t ft_memchr: %p\n", memchr(str, 'd', 4), ft_memchr(str, 'd', 4));
-	printf("memchr: %p\t\t ft_memchr: %p\n", memchr(str, 'd', 3), ft_memchr(str, 'd', 3));
-	printf("memchr: %p\t ft_memchr: %p\n", memchr(str, 'G', 100), ft_memchr(str, 'G', 100));
+	printf("memchr: %p\t ft_memchr: %p\n", 
+	memchr(str, 'd', 4), ft_memchr(str, 'd', 4));
+	printf("memchr: %p\t\t ft_memchr: %p\n", 
+	memchr(str, 'd', 3), ft_memchr(str, 'd', 3));
+	printf("memchr: %p\t ft_memchr: %p\n", 
+	memchr(str, 'G', 100), ft_memchr(str, 'G', 100));
 	return (0);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 16:43:31 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 19:31:55 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 23:37:43 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (trimmed);
 }
 
-
+/*
 #include <stdio.h>
 
 int main()
@@ -83,3 +83,4 @@ int main()
 	printf ("%s\n", ft_strtrim(string2, del2));
 	return (0);
 }
+*/
