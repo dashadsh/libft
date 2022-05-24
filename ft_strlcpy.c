@@ -6,9 +6,20 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 16:25:24 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 16:30:20 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 22:23:10 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+size-bounded string copying
+
+take the full size of the destination buffer
+and guarantee NUL-termination if there is room. 
+Note that room for the NUL should be included in dstsize.
+
+copies up to dstsize - 1 characters from the string src to dst, 
+NUL-terminating the result if dstsize is not 0.
+*/
 
 #include "libft.h"
 

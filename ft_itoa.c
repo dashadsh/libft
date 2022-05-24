@@ -6,9 +6,18 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 12:04:20 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 20:25:25 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 21:14:52 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Allocates (with malloc(3)) and returns a string
+representing the integer received as an argument.
+Negative numbers must be handled.
+
+Returns the string representing the integer.
+NULL if the allocation fails.
+*/
 
 #include "libft.h"
 
@@ -55,10 +64,14 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
+/*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-	
+	printf("%s\n", ft_itoa(0));
+	printf("%s\n", ft_itoa(-2147483648));
+	printf("%s\n", ft_itoa(123));
 	return (0);
 }
+*/

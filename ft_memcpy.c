@@ -10,6 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Copy memory area
+
+Copies n bytes from memory area src to memory area dst.
+If dst and src overlap, behavior is undefined.
+Applications in which dst and src might overlap should use memmove(3) instead.
+
+Returns the original value of dst
+*/
+
 #include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
@@ -26,8 +36,24 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
+/*
+#include <string.h>
 #include <stdio.h>
+
+int main()
 {
-	
+	char dst[] = "oooooooooo"; // char *dst - bus error
+	char src[] = "XXXXXXXOOO";
+	size_t i = 3;
+
+	printf("memcpy: %p\tft_memcpy: %p\n", memcpy(dst, src, i), ft_memcpy(dst, src, i));
+
+	char *origin = memcpy(dst, src, i);
+	printf("string after memcpy: %s\n", origin);
+
+
+	char *custom = ft_memcpy(dst, src, i);
+	printf("string after ft_memcpy: %s\n", custom);
+	return (0);
 }
+*/

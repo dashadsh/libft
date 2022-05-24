@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 14:54:55 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 20:20:17 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 21:52:38 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,33 @@ void	ft_bzero(void *s, size_t n)
 
 /*
 #include <stdio.h>
-
+#include <strings.h>
+ 
 int	main()
 {
-	char	str[9] = "abcdefgh";
-	int	i = 0;
+	char	origin[11] = "xxxxxOOOOO";
+	char	custom[11] = "xxxxxOOOOO";
 	
-	printf("%s", str);
-	printf("\n");	
-	ft_bzero(str, 3);
-	while (i <= 9)
-		printf("%d ", str[i++]);
+	bzero(origin, 2);
+	ft_bzero(custom, 2);
+	
+	int i = 0;
+	printf("ascii chars after bzero:\n");
+	while (i < 11)
+		printf("%d ", origin[i++]);
 	printf("\n");
-	printf("%s", str + 3);	// ("%s", str) doesn't show anything because
-	printf("\n");			// setting even just the first `char` in the array to 0
-	return (0);				// results in an empty string.
- }
+	
+	i = 0;
+	printf("ascii chars after ft_bzero:\n");
+	while (i < 11)
+		printf("%d ", custom[i++]);
+	printf("\n");
+	
+	printf("remaining string after bzero:\n");
+	printf("%s\n", origin + 2); 					// ("%s", str) doesn't show anything because
+													// setting even just the first `char` in the array to 0
+	printf("remaining string after ft_bzero:\n");	// results in an empty string.
+	printf("%s\n", custom + 2);
+	return (0);
+}
 */

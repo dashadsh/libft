@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 13:50:24 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 20:20:36 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 21:12:27 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,9 @@ int	main(void)
 
 {
 	int	amount = 5;
-	int	*ptr;
+	int *ptr = (int *)ft_calloc(amount, sizeof(int));
 	int	i = 0;
-
-	ptr = (int *)ft_calloc(amount, sizeof(int));
+	
 	while (i < amount)
 		printf("%d ", ptr[i++]);
 	printf("\n");

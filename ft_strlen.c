@@ -6,9 +6,13 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 19:57:18 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 18:19:06 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 21:29:19 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+find length of string
+*/
 
 #include "libft.h"
 
@@ -28,10 +32,10 @@ size_t	ft_strlen(const char *s)
 
 int	main()
 {
-	char *str = "qwerty";
-	printf("string \"%s\"\n", "qwerty");
-	printf("strlen: %zu\n", strlen(str));
-	printf("ft_strlen: %zu\n", ft_strlen(str));
+	char *str = "STRING";
+	char *str2 = "";
+	printf("strlen: %ld\t ft_strlen: %ld\n", strlen(str), ft_strlen(str));
+	printf("strlen: %ld\t ft_strlen: %ld\n", strlen(str2), ft_strlen(str2));
 	return (0);
 }
 */

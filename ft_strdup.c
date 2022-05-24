@@ -6,9 +6,17 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 18:00:32 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 20:24:42 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 21:18:53 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+save a copy of a string
+
+Allocates sufficient memory for a copy of the string s1,
+does the copy, and returns a pointer to it.  
+The pointer may subsequently be used as an argument to the function free(3).
+*/
 
 #include "libft.h"
 

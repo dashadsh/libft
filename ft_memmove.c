@@ -6,14 +6,19 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 15:19:51 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 16:29:05 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 22:20:57 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-function copies n bytes from memory area src to memory area dest,
-the memory areas may overlap 
-if src < dst copy from back to front, or use ft_memcpy
+Copy byte string
+
+Function copies len bytes from string src to string dst. The two strings may overlap; 
+the copy is always done in a non-destructive manner.
+
+If src < dst copy from back to front, or use ft_memcpy.
+
+Returns the original value of dst
 */
 
 #include "libft.h"
@@ -31,14 +36,25 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		ft_memcpy(dst, src, len);
 	return (dst);
 }
+
 /*
+#include <string.h>
 #include <stdio.h>
 
 int main()
 {
-	char dst[100] = "freestyle";
-	char src[100] = "anticipation";
-	printf("dst after memmove: %s\n", (char *)ft_memmove(dst, src, 4));
+	char dst[] = "12345"; // char *dst - bus error
+	char src[] = "abcdefgah";
+	size_t i = 3;
+
+	printf("memmove: %p\tft_memmove: %p\n", memmove(dst, src, i), ft_memmove(dst, src, i));
+
+	char *origin = memmove(dst, src, i);
+	printf("string after memmove: %s\n", origin);
+
+
+	char *custom = ft_memmove(dst, src, i);
+	printf("string after ft_memmove: %s\n", custom);
 	return (0);
 }
 */
