@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 15:19:51 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 22:20:57 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/24 22:30:56 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ Copy byte string
 Function copies len bytes from string src to string dst. The two strings may overlap; 
 the copy is always done in a non-destructive manner.
 
-If src < dst copy from back to front, or use ft_memcpy.
+If (src < dst) copy from back to front or
+if (src > dst) use ft_memcpy.
 
 Returns the original value of dst
 */
