@@ -6,9 +6,18 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 16:08:22 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 16:30:34 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 01:39:35 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+compare  lexicographically the null-terminated strings s1 and s2 strings
+
+return an integer greater than, equal to, or less than 0, according as the
+string s1 is greater than, equal to, or less than the string s2.  
+The comparison is done using unsigned characters, 
+so that ‘\200’ is greater than ‘\0’
+*/
 
 #include "libft.h"
 
@@ -25,25 +34,22 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 }
 
 /*
-return ((unsigned char)s1[i] - (unsigned char)s2[i]); 
-- the same
-*/
-/*
 #include <stdio.h>
+#include <string.h>
 
-int main () 
+int main ()
 {
-	char	str1[7] = "abbdef";
-	char	str2[7] = "abcdef";
-	int	res = ft_strncmp(str1, str2, 3);
-	
-  	printf ("%d\n", res);
- 	if (res < 0) 
-        printf("str1 is less than str2\n");
- 	else if (res > 0)
-		printf("str2 is less than str1\n");
-	else
-		printf("str1 = str2\n");
+	printf("test: (ABCD, ABDD, 3)\tstrncmp: %d\t, ft_strncmp: %d\n", 
+	strncmp("ABCD", "ABDD", 3), ft_strncmp("ABCD", "ABDD", 3));
+	printf("test: (ABCD, ABCY, 3)\tstrncmp: %d\t, ft_strncmp: %d\n", 
+	strncmp("ABCD", "ABCY", 3), ft_strncmp("ABCD", "ABCY", 3));
+	printf("test: (ABDD, ABCD, 3)\tstrncmp: %d\t, ft_strncmp: %d\n", 
+	strncmp("ABDD", "ABCD", 3), ft_strncmp("ABDD", "ABCD", 3));
 	return (0);
 }
+*/
+
+/*
+return ((unsigned char)s1[i] - (unsigned char)s2[i]); 
+- the same
 */

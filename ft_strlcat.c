@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 17:06:53 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/25 00:34:47 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 01:48:23 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ termination if there is room.  Note that room for the NUL
 should be included in dstsize.
 
 appends string src to the end of dst.  It will append at most dstsize -
-strlen(dst) - 1 characters.  It will then NUL-terminate, unless dstsize is 0 or the
-original dst string was longer than dstsize (in practice this should not happen as it
-means that either dstsize is incorrect or that dst is not a proper string).
+strlen(dst) - 1 characters.  
+It will then NUL-terminate, unless dstsize is 0 or 
+the original dst string was longer than dstsize.
 
 If the src and dst strings overlap, the behavior is undefined.
 
