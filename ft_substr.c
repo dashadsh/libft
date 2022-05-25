@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 18:55:11 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 21:16:49 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 13:26:00 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	copy[len] = '\0';
 	return (copy);
 }
+
+/*
+#include <stdio.h>
+
+int main()
+{	
+	char str[12] = "synthesizer";
+	printf("\"%s\", after ft_substr - \"%s\"\n", str, ft_substr(str, 3, 3));
+	return (0);	
+}
+*/

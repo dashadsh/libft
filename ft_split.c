@@ -6,9 +6,19 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 21:36:59 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 11:03:02 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 13:40:13 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Allocates (with malloc(3)) and returns an array
+of strings obtained by splitting ’s’ using the
+character ’c’ as a delimiter.  The array must end
+with a NULL pointer.
+
+Return - the array of new strings resulting from the split.
+NULL if the allocation fails.
+*/
 
 #include "libft.h"
 
@@ -63,14 +73,6 @@ char	**ft_split(const char *s, char c)
 	array[i] = NULL;
 	return (array);
 }
-
-/*
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-_________
-what if is not possible -
-ft_substr(s, 0, ft_wordlen(s, c));
-- need free?
-*/
 /*
 #include <stdio.h>
 
@@ -82,7 +84,16 @@ int	main(void)
     char **output;
 	
     output = ft_split(str, c);
+	printf("string \"%s\" after ft_split:\n", str);
     while (output[i])
         printf("%s\n", output[i++]);
 }
+*/
+
+/*
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+_________
+what if
+!(ft_substr(s, 0, ft_wordlen(s, c))) 
+- need free?
 */

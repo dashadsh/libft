@@ -6,9 +6,17 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 16:25:06 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 16:30:10 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 13:31:30 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Allocates (with malloc(3)) and returns a new
+string, which is the result of the concatenation
+of ’s1’ and ’s2’.
+
+Returns new string, NULL if allocation fails.
+*/
 
 #include "libft.h"
 
@@ -38,3 +46,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	out[i + j] = '\0';
 	return (out);
 }
+
+/*
+#include <stdio.h>
+int main()
+{
+	char *prefix = "abc";
+	char *suffix = "def";
+	printf("prefix \"%s\" + suffix \"%s\" = \"%s\"\n", 
+	prefix, suffix, ft_strjoin(prefix, suffix));
+	return (0);
+}
+*/

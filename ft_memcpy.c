@@ -53,7 +53,6 @@ int main()
 	char *origin = memcpy(dst, src, i);
 	printf("string after memcpy: %s\n", origin);
 
-
 	char *custom = ft_memcpy(dst, src, i);
 	printf("string after ft_memcpy: %s\n", custom);
 	return (0);

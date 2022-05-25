@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 16:43:31 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/25 10:23:24 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 13:33:34 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,10 @@ int main()
 	char *string2 = "QWERTYqwertyEEEERRRRTTTT";
 	char *del2 = "QWERTY";
 	
-	printf ("%s\n", ft_strtrim(string, del));	
-	printf ("%s\n", ft_strtrim(string2, del2));
+	printf ("%s - %s = %s\n", 
+	string, del, ft_strtrim(string, del));	
+	printf ("%s - %s = %s\n",
+	string2, del2, ft_strtrim(string2, del2));
 	return (0);
 }
 */
