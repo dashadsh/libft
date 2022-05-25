@@ -6,9 +6,16 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 16:37:55 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 23:53:41 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 18:06:27 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Takes as a parameter a node and frees the memory of
+the node’s content using the function ’del’ given
+as a parameter and free the node.  The memory of
+’next’ must not be freed.
+*/
 
 #include "libft.h"
 

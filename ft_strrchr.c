@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 17:20:50 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/25 01:23:45 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 18:13:08 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,4 @@ int	main(void)
 	strrchr(str, 'G'), ft_strrchr(str, 'G'));
 	return (0);
 }
-*/
-
-/*
-return ((char *)s + i); BROKEN 
 */

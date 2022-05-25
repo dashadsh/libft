@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 16:11:21 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/25 16:32:28 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 16:35:37 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	i = 0;
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s)) + 1);
 	if (str == NULL)
-		return (NULL);	
+		return (NULL);
 	while (s[i] != '\0')
 	{
 		str[i] = f(s[i]);

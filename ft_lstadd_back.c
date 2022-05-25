@@ -6,9 +6,13 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 16:26:35 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 20:12:00 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 18:09:08 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Adds the node ’new’ at the end of the list.
+*/
 
 #include "libft.h"
 

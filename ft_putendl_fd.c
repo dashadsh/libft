@@ -6,9 +6,14 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 17:25:10 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/23 19:18:01 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 18:11:11 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Outputs the string ’s’ to the given file descriptor
+followed by a newline.
+*/
 
 #include "libft.h"
 

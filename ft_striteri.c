@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 15:51:40 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/25 16:30:54 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 18:12:18 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 }
 
 /*
-f(index, s + index)
-is the same as:
-f(index, &s[index])
-*/
-
-/*
 #include <stdio.h>
 
 void f(unsigned int i, char *str)
@@ -54,4 +48,10 @@ int main()
 	ft_striteri(str, f);
 	return 0;
 }
+*/
+
+/*
+f(index, s + index)
+is the same as:
+f(index, &s[index])
 */

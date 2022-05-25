@@ -6,7 +6,7 @@
 #    By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 17:22:34 by dgoremyk          #+#    #+#              #
-#    Updated: 2022/05/24 23:34:11 by dgoremyk         ###   ########.fr        #
+#    Updated: 2022/05/25 18:14:07 by dgoremyk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,8 +61,9 @@ bonus: $(BONUS_OBJS)
 	
 # Define a pattern rule that compiles every .c file into a .o file
 # https://www.gnu.org/software/make/manual/make.html#Pattern-Match
-%.o: %.c
-	$(CC) -c $(CFLAGS) $< -o $@
+#%.o: %.c
+#	$(CC) -c $(CFLAGS) $< -o $@
+#or
 #	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:

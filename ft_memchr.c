@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 17:42:15 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/25 00:51:56 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 18:07:57 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,4 @@ int	main(void)
 	memchr(str, 'G', 100), ft_memchr(str, 'G', 100));
 	return (0);
 }
-*/
-
-/*
-if (*((unsigned char *)(s + i)) == (unsigned char)c)
 */

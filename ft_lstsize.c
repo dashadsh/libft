@@ -6,9 +6,13 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 15:05:39 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 23:53:09 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 18:05:32 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Counts the number of nodes in a list.
+*/
 
 #include "libft.h"
 

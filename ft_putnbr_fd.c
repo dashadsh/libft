@@ -6,9 +6,14 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 17:20:41 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 10:42:01 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 18:11:25 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Outputs the integer ’n’ to the given file
+descriptor.
+*/
 
 #include "libft.h"
 

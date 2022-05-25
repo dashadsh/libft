@@ -6,9 +6,17 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 17:08:31 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/23 22:01:08 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 18:06:47 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Deletes and frees the given node and every
+successor of that node, using the function ’del’
+and free(3).
+Finally, the pointer to the list must be set to
+NULL.
+*/
 
 #include "libft.h"
 

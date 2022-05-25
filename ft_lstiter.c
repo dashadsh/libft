@@ -6,9 +6,14 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 19:08:26 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/23 21:55:12 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 18:07:01 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Iterates the list ’lst’ and applies the function
+’f’ on the content of each node.
+*/
 
 #include "libft.h"
 
