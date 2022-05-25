@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 16:43:31 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 23:37:43 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 10:23:24 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ the string */
 
 #include "libft.h"
 
-static size_t	ft_get_start(char const *str, char const *set)
+static size_t	ft_start(char const *str, char const *set)
 {
 	size_t	i;
 	size_t	len;
@@ -32,7 +32,7 @@ static size_t	ft_get_start(char const *str, char const *set)
 	return (i);
 }
 
-static size_t	ft_get_end(char const *str, char const *set)
+static size_t	ft_end(char const *str, char const *set)
 {
 	size_t	i;
 	size_t	len;
@@ -58,8 +58,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	if (!set)
 		return (ft_strdup(s1));
-	start = ft_get_start(s1, set);
-	end = ft_get_end(s1, set);
+	start = ft_start(s1, set);
+	end = ft_end(s1, set);
 	if (start >= end)
 		return (ft_strdup(""));
 	trimmed = malloc(end - start + 1 * sizeof(char));

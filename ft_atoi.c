@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 16:07:07 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 23:38:52 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 10:07:34 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,15 +49,15 @@ int	ft_atoi(const char *str)
 
 int	main(void)
 {
-	printf("Test: 123\t atoi: %d\t ft_atoi: %d\n", 
+	printf("Test: 123\t\tatoi: %d\t\tft_atoi: %d\n", 
 	atoi("123"), ft_atoi("123"));
-	printf("Test: -2147483648\t atoi: %d\t ft_atoi: %d\n", 
+	printf("Test: -2147483648\tatoi: %d\tft_atoi: %d\n", 
 	atoi("-2147483648"), ft_atoi("-2147483648"));
-	printf("Test: 0\t atoi: %d\t ft_atoi: %d\n", 
+	printf("Test: 0\t\t\tatoi: %d\t\t\tft_atoi: %d\n", 
 	atoi("0"), ft_atoi("0"));
-	printf("Test:  	-789\t atoi: %d\t ft_atoi: %d\n", 
+	printf("Test:  	-789\t\tatoi: %d\t\tft_atoi: %d\n", 
 	atoi(" 	-789"), ft_atoi(" 	-789"));
-	printf("Test: 	-+--789\t atoi: %d\t ft_atoi: %d\n", 
+	printf("Test: 	-+--789\t\tatoi: %d\t\t\tft_atoi: %d\n", 
 	atoi(" 	-+--789"), ft_atoi(" 	-+--789"));
 	return (0);
 }

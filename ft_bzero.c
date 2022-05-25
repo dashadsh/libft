@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 14:54:55 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 23:40:21 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 10:19:03 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,7 @@ void	ft_bzero(void *s, size_t n)
 
 	i = 0;
 	while (i < n)
-	{
-		((unsigned char *)s)[i] = 0;
-		i++;
-	}
+		((unsigned char *)s)[i++] = 0;
 }
 
 /*

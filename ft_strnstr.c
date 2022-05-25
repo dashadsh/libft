@@ -6,9 +6,22 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 18:46:04 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/25 01:47:29 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/25 10:05:16 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+locate a substring in a string
+
+first occurrence of the null-terminated string needle in 
+the null-terminated string haystack, where not more than len
+characters are searched
+
+If needle is an empty string, haystack is returned; 
+if needle occurs nowhere in haystack, NULL is returned; 
+otherwise a pointer to the first character of the first 
+occurrence of needle is returned
+*/
 
 #include "libft.h"
 
@@ -29,3 +42,18 @@ char	*ft_strnstr(const char *str, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+
+/*
+#include <string.h>
+#include <stdio.h>
+
+int main()
+{
+	printf("('XOxoXOxo','XO', 6)\t strnstr: %p\tft_strntsr: %p\n",
+	strnstr("XOxoXOxo","XO", 6), ft_strnstr("XOxoXOxo","XO", 6));
+
+	printf("('XOxoXOxo','xo', 3)\t strnstr: %p\tft_strntsr: %p\n",
+	strnstr("XOxoXOxo","xo", 3), ft_strnstr("XOxoXOxo","xo", 3));
+	return (0);
+}
+*/
