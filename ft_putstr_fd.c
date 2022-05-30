@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 19:03:09 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/25 18:11:43 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/30 19:43:28 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,14 @@ void	ft_putstr_fd(char *s, int fd)
 		return ;
 	write(fd, s, ft_strlen(s));
 }
+
+/*
+#include <stdio.h>
+
+int main()
+{
+	ft_putendl_fd("print string and newline", 1);
+	ft_putstr_fd("print string and no newline", 1);
+	return(0);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 18:00:32 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 21:18:53 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/30 19:53:36 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,13 @@ char	*ft_strdup(const char *s1)
 	ft_memcpy(copy, s1, (ft_strlen(s1) + 1));
 	return (copy);
 }
+
+/*
+#include <stdio.h>
+
+int main()
+{
+	printf("%s\n", ft_strdup("goodbye this cruel word!"));
+	return (0);
+}
+*/

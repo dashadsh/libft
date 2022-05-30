@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/06 21:36:59 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/25 13:40:13 by dgoremyk         ###   ########.fr       */
+/*   Created: 2022/05/30 16:25:12 by dgoremyk          #+#    #+#             */
+/*   Updated: 2022/05/30 20:14:58 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@ Allocates (with malloc(3)) and returns an array
 of strings obtained by splitting ’s’ using the
 character ’c’ as a delimiter.  The array must end
 with a NULL pointer.
-
 Return - the array of new strings resulting from the split.
 NULL if the allocation fails.
 */
@@ -49,37 +48,60 @@ size_t	ft_wordlen(const char *s, char c)
 	return (wordlen);
 }
 
+void	ft_free(char **dest)
+{
+	int	i;
+
+	i = 0;
+	while (dest[i])
+	{
+		free(dest[i]);
+		i++;
+	}
+	free(dest);
+}
+
+char	*ft_putword(char **array, const char *s, char c, int i)
+{
+	array[i] = ft_substr(s, 0, ft_wordlen(s, c));
+	if (!array[i])
+	{
+		(ft_free(array));
+		return (NULL);
+	}
+	return (array[i]);
+}
+
 char	**ft_split(const char *s, char c)
 {
 	char	**array;
 	size_t	i;
 
 	if (!s)
-		return (0);
-	array = malloc((ft_word_counter(s, c) + 1) * sizeof(char *));
+		return (NULL);
+	array = (char **)ft_calloc(ft_word_counter(s, c) + 1, sizeof(char *));
 	if (!array)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (*s)
 	{
 		while (*s && *s == c)
 			s++;
-		if (*s)
-		{
-			array[i++] = ft_substr(s, 0, ft_wordlen(s, c));
-			s += ft_wordlen(s, c);
-		}
+		if (*s && *s != c)
+			ft_putword(array, s, c, i);
+		s += ft_wordlen(s, c);
+		i++;
 	}
-	array[i] = NULL;
 	return (array);
 }
+
 /*
 #include <stdio.h>
 
 int	main(void)
 {
     char *str = "goodbye, this cruel world";
-    char c = ' ';
+    char c = 'x';
 	int i = 0;
     char **output;
 	
@@ -88,12 +110,4 @@ int	main(void)
     while (output[i])
         printf("%s\n", output[i++]);
 }
-*/
-
-/*
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-_________
-what if
-!(ft_substr(s, 0, ft_wordlen(s, c))) 
-- need free?
 */

@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 13:50:24 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/24 21:12:27 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/30 12:55:42 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	size_t	*str;
 
-	if (count >= SIZE_MAX || size >= SIZE_MAX)
-		return (NULL);
-	str = (size_t *)malloc(count * size);
+	str = malloc(count * size);
 	if (!str)
 		return (NULL);
 	ft_bzero(str, count * size);
@@ -50,5 +48,27 @@ int	main(void)
 	printf("\n");
 	free(ptr);
 	return (0);
+}
+*/
+
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+char *a = NULL;
+unsigned int i;
+unsigned int count;
+unsigned int size;
+
+count = 4000000000;
+size = 2;
+a = calloc(count, size);
+i = -1;
+printf("my:\n");
+while (++i < count * size)
+	printf("%c\n", a[i]);
+i = -1;
+return 0;
 }
 */

@@ -6,7 +6,7 @@
 #    By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 17:22:34 by dgoremyk          #+#    #+#              #
-#    Updated: 2022/05/25 18:14:07 by dgoremyk         ###   ########.fr        #
+#    Updated: 2022/05/27 14:34:15 by dgoremyk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,8 @@ CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
 
+# Without the -f flag, you'll end up with an error message and 
+# error return value if the file does not exist
 RM = rm -f
 
 SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \

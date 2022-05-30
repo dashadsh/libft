@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 16:08:17 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/25 18:10:37 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/30 14:51:07 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Returns its first argument
 void	*ft_memset(void *b, int c, size_t len)
 {
 	while (len--)
-		((unsigned char *)b)[len] = c;
+		((unsigned char *)b)[len] = (unsigned char)c;
 	return (b);
 }
 
