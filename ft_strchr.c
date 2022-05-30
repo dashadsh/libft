@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 17:10:17 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/25 00:52:49 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/30 20:36:50 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,10 @@ int	main(void)
 }
 */
 
-/* BROKEN
+/* 
+TO BE DISCUSSED: 
+why implementation w/o i doesn't work?
+
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s && *s != (char)c)

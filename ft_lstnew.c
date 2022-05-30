@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 13:40:36 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/25 18:09:48 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/05/30 20:33:29 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,22 +32,6 @@ t_list	*ft_lstnew(void *content)
 	newnode->next = NULL;
 	return (newnode);
 }
-
-/*
-BROKEN MAIN
-#include <stdio.h>
-
-int		main(void)
-{
-	char	*content = "some text";
-	t_list	*newnode;
-	
-	newnode = ft_lstnew((void *)content);
-	
-	printf("\n%d\n", newnode->content);
-	return (0);
-}
-*/
 
 /*
 	(*newnode).content = content;
