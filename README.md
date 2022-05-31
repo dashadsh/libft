@@ -2,7 +2,7 @@
 
 **Functions from <ctype.h>**
 
-ft_isalpha - checks for an alphabetic character.\n
+ft_isalpha - checks for an alphabetic character.<br/>
 ft_isdigit - check for a digit.
 ft_isalnum - checks for an alphanumeric character.
 ft_isascii - checks whether c fits into the ASCII character set.
