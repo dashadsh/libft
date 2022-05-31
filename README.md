@@ -1,4 +1,6 @@
-### **List of Functions**
+### **What is libft?**
+
+Libft is an individual project at 42 that requires to re-create some standard C library and some additional functions.
 
 **Functions from <ctype.h>**
 
@@ -56,3 +58,15 @@ ft_lstadd_back - adds an element at the end of a list.<br/>
 ft_lstclear - deletes and free list.<br/>
 ft_lstiter - applies a function to each element of a list.<br/>
 ft_lstmap - applies a function to each element of a list.<br/>
+
+### **How to use it?**
+
+git clone https://github.com/dashadsh/libft<br/>
+cd libft<br/>
+make<br/>
+
+**To compile a <filename.c> use:**<br/>
+
+gcc <filename.c> -L. -lft<br/>
+or<br/>
+gcc <filename.c> ./libft.a<br/>
