@@ -77,4 +77,8 @@ re: fclean all
 # There are two reasons to use a phony target: 
 # to avoid a conflict with a file of the same name, and to improve performance.
 # https://www.gnu.org/software/make/manual/html_node/Phony-Targets.html
+<<<<<<< HEAD
 .PHONY: all clean fclean re bonus
+=======
+.PHONY: all clean fclean re bonus
+>>>>>>> 376c7730cf5be5659d5fa43b45dccb783fe44963
