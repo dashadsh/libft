@@ -1,3 +1,6 @@
+Additional functions, not required for libft project:
+ft_strnew
+
 ### **What is libft?**
 
 Libft is an individual project at 42 that requires to re-create some standard C library and some additional functions.
