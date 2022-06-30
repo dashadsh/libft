@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 13:50:24 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/30 12:55:42 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/06/29 23:51:24 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	size_t	*str;
 
+	if (count >= 4294967295 || size >= 4294967295)
+		return (NULL);
 	str = malloc(count * size);
 	if (!str)
 		return (NULL);

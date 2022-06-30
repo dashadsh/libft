@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 16:25:06 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/25 13:31:30 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/06/22 15:24:52 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Returns new string, NULL if allocation fails.
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*out;
+	char	*newstr;
 	size_t	i;
 	size_t	j;
 
@@ -30,24 +30,53 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	if (!s1 || !s2)
 		return (NULL);
-	out = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!out)
+	newstr = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!newstr)
 		return (NULL);
 	while (s1[i])
 	{
-		out[i] = s1[i];
+		newstr[i] = s1[i];
 		i++;
 	}
 	while (s2[j])
 	{
-		out[i + j] = s2[j];
+		newstr[i + j] = s2[j];
 		j++;
 	}
-	out[i + j] = '\0';
-	return (out);
+	newstr[i + j] = '\0';
+	return (newstr);
 }
 
 /*
+char	*my_str_join(char *s1, char *s2)
+{
+	char	*new_str;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	new_string = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!new_str)
+		return (NULL);
+	if (s1)
+	{
+		while (s1[i])
+		{	
+			new_str[i] = s1[i];
+			i++;
+		}
+		free(s1);
+	}
+	while (s2[j])
+		new_str[i++] = s2[j++];
+	new_str[i] = '\0';
+	return (new_str);
+}
+*/
+
+/*
+#include <stdlib.h>
 #include <stdio.h>
 int main()
 {

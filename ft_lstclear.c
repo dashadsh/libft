@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 17:08:31 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/25 18:06:47 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/06/26 19:41:52 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,38 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	*lst = NULL;
 }
+
+/*
+void	ft_lstclear(t_list **lst, void (*del)(void*))
+{
+	t_list	*dn;
+
+	dn = *lst;
+	if (!lst || !del)
+		return ;
+	while (*lst)
+	{
+		*lst = (*lst)->next;
+		del(dn->content);
+		free (dn);
+		dn = *lst;
+	}
+	*lst = NULL;
+}
+*/
+
+/*
+void	ft_lstclear(t_list **lst, void (*del)(void *))
+{
+	t_list	*temp;
+
+	if (!*lst)
+		return ;
+	while (*lst)
+	{
+		temp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		(*lst) = temp;
+	}
+}
+*/
