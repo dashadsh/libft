@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 17:20:41 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/05/25 18:11:25 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/07/19 11:57:01 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,24 @@ void	ft_putnbr_fd(int nb, int fd)
 		ft_putnbr_fd(casted_nb % 10, fd);
 	}
 }
+
+/*
+void	putdecimal(int n)
+{
+	long			long_n;
+
+	long_n = (long)n;
+	if (long_n < 0)
+	{
+		write(1, "-", 1);
+		long_n = -long_n;
+	}
+	if (long_n / 10)
+		putdecimal(long_n / 10);
+	long_n = long_n % 10 + '0'; // long_n %= 10 + '0';
+	write(1, &long_n, 1);
+}
+*/
 
 /*
 int	main(void)

@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 18:55:11 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/06/30 11:13:01 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/07/20 11:18:34 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,31 +38,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (copy);
 }
 
-/*
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+/* MEM KO
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t			i;
-	char			*ptr;
-	unsigned int	size;
+	char	*substring;
 
-	i = 0;
-	ptr = ft_calloc(sizeof(char), len + 1);
-	if (!ptr)
-	{
+	if (s == NULL || ft_strlen(s) < start)
+		return (ft_strdup(""));
+	substring = malloc((len + 1) * sizeof(char));
+	if (substring == NULL)
 		return (NULL);
-	}
-	size = ft_strlen(s);
-	if (start >= size || !s)
-	{
-		len = 0;
-	}
-	while (s[start + i] && i < len)
-	{
-		ptr[i] = s[start + i];
-		i++;
-	}
-	ptr[i] = 0;
-	return (ptr);
+	ft_strlcpy(substring, s + start, len + 1);
+	return (substring);
 }
 */
 

@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 16:25:06 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/06/22 15:24:52 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/07/05 12:45:05 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 	}
 	while (s2[j])
-	{
-		newstr[i + j] = s2[j];
-		j++;
-	}
-	newstr[i + j] = '\0';
+		newstr[i++] = s2[j++];
+	newstr[i] = '\0';
 	return (newstr);
 }
 
 /*
-char	*my_str_join(char *s1, char *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*new_str;
 	int		i;
@@ -56,22 +53,22 @@ char	*my_str_join(char *s1, char *s2)
 
 	i = 0;
 	j = 0;
-	new_string = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!new_str)
+	newstr = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!newstr)
 		return (NULL);
 	if (s1)
 	{
 		while (s1[i])
 		{	
-			new_str[i] = s1[i];
+			newstr[i] = s1[i];
 			i++;
 		}
 		free(s1);
 	}
 	while (s2[j])
-		new_str[i++] = s2[j++];
-	new_str[i] = '\0';
-	return (new_str);
+		newstr[i++] = s2[j++];
+	newstr[i] = '\0';
+	return (newstr);
 }
 */
 

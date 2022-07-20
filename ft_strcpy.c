@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/03 19:03:09 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/07/15 17:04:59 by dgoremyk         ###   ########.fr       */
+/*   Created: 2022/06/30 17:06:22 by dgoremyk          #+#    #+#             */
+/*   Updated: 2022/07/05 12:36:29 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Outputs the string ’s’ to the given file
-descriptor.
+ft_strcpy
+Copies string from (char *src) to (char *dest)
+adds NULL termination and returns dest string.
 */
 
-#include "libft.h"
-
-void	ft_putstr_fd(char *s, int fd)
+char	*ft_strcpy(char *dest, char *src)
 {
-	if (!s)
-		return ;
-	write(fd, s, ft_strlen(s));
-}
+	int i;
 
-/*
-#include <stdio.h>
-
-int main()
-{
-	ft_putendl_fd("print string and newline", 1);
-	ft_putstr_fd("print string and no newline", 1);
-	return(0);
+	i = 0;
+	while (*(src + i))
+	{
+		*(dest + i) = *(src + i);
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
-*/
