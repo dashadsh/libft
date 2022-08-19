@@ -1,11 +1,7 @@
-Additional functions, not required for libft project:
-ft_strnew
-
-### **What is libft?**
-
+```
 Libft is an individual project at 42 that requires to re-create some standard C library and some additional functions.
 
-**Functions from <ctype.h>**
+-------Functions from <ctype.h>---------
 
 ft_isalpha - checks for an alphabetic character.<br/>
 ft_isdigit - check for a digit.<br/>
@@ -15,7 +11,7 @@ ft_isprint - checks for any printable character.<br/>
 ft_toupper - convert char to uppercase.<br/>
 ft_tolower - convert char to lowercase.<br/>
 
-**Functions from <string.h>**
+-------Functions from <string.h>-------
 
 ft_strlen - calculate the length of a string.<br/>
 ft_memset - fill memory with a constant byte.<br/>
@@ -32,12 +28,12 @@ ft_memcmp - compare memory areas.<br/>
 ft_strnstr - locate a substring in a string.<br/>
 ft_strdup - creates a duplicate for the string passed as a parameter.<br/>
 
-**Functions from <stdlib.h>**
+-------Functions from <stdlib.h>-------
 
 ft_atoi - convert a string to an integer.<br/>
 ft_calloc - allocates memory and sets its bytes' values to 0.<br/>
 
-**Non-standard functions**
+-------Non-standard functions-------
 
 ft_substr - returns a substring from a string.<br/>
 ft_strjoin - concatenates two strings.<br/>
@@ -62,14 +58,14 @@ ft_lstclear - deletes and free list.<br/>
 ft_lstiter - applies a function to each element of a list.<br/>
 ft_lstmap - applies a function to each element of a list.<br/>
 
-### **How to use it?**
+-------How to use it?-------
 
 git clone https://github.com/dashadsh/libft<br/>
 cd libft<br/>
 make<br/>
 
-**To compile a <filename.c> use:**<br/>
+To compile a <filename.c> use:
 
-gcc <filename.c> -L. -lft<br/>
+gcc <filename.c> -L. -lft
 or<br/>
-gcc <filename.c> ./libft.a<br/>
+gcc <filename.c> ./libft.a
