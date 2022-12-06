@@ -6,7 +6,7 @@
 /*   By: dgoremyk <dgoremyk@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 16:25:12 by dgoremyk          #+#    #+#             */
-/*   Updated: 2022/08/19 15:39:04 by dgoremyk         ###   ########.fr       */
+/*   Updated: 2022/11/28 22:48:53 by dgoremyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,83 @@ NULL if the allocation fails.
 
 #include "libft.h"
 
+/* NEW VERSION OF FT_SPLIT W/O USING EXTRA FUNCTIONS */
+/* count words by checking if it's the last letter of the word (next = c or next = NULL) */
+size_t	ft_word_counter(const char *s, char c)
+{
+	size_t	word_counter;
+
+	if (!*s)
+		return (0);
+	word_counter = 0;
+	while (*s)
+	{
+		if (*s != c && ((*(s + 1)) == c || (*(s + 1)) == '\0'))
+			word_counter++;
+		s++;
+	}
+	return (word_counter);
+}
+
+/*
+1. count word length + allocate memory for it (incl NULL terminator)
+2. copies chars from an original str to new placem return ptr to it
+3. nothing is happening to orig. string  - we need to move among that using ft_split function
+*/
+char	*ft_write_words(const char *str, char c)
+{
+	int		i;
+	char	*word;
+
+	i = 0;
+	while (str[i] && str[i] != c)
+		i++;
+	word = malloc(sizeof(char) * (i + 1));
+	if (!word)
+		return (NULL);
+	i = 0;
+	while (str[i] && str[i] != c)
+	{
+		word[i] = str[i];
+		i++;
+	}
+	word[i] = '\0';
+	return (word);
+}
+
+/*
+1. count words using ft_word_counter + allocate memory for that
+2. 
+*/
+char	**ft_split(char const *s, char c)
+{
+	char	**splitted;
+	int		i;
+	int		words;
+
+	if (!s)
+		return (NULL);
+	words = ft_word_counter(s, c);
+	splitted = malloc(sizeof(char *) * (words + 1));
+	if (!splitted)
+		return (NULL);
+	i = 0;
+	while (i < words)
+	{
+		while (*s && *s == c)
+			s++;
+		splitted[i] = ft_write_words(s, c);
+		while (*s && *s != c)
+			s++;
+		i++;
+	}
+	splitted[i] = NULL;
+	return (splitted);
+}
+
+
+/***********************************************************************************************/
+/*
 size_t	ft_word_counter(const char *s, char c)
 {
 	size_t	word_counter;
@@ -74,6 +151,9 @@ char	**ft_split(const char *s, char c)
 	}
 	return (array);
 }
+*/
+
+/***********************************************************************************************/
 
 /*
 size_t	ft_word_counter(const char *s, char c)
@@ -154,10 +234,23 @@ char	**ft_split(const char *s, char c)
 /*
 #include <stdio.h>
 
+void	free_2d(char **a)
+{
+	int	i;
+
+	i = 0;
+	while (a[i])
+	{
+		free(a[i]);
+		i++;
+	}
+	free(a);
+}
+
 int	main(void)
 {
-    char *str = "goodbye, this cruel world";
-    char c = 'x';
+    char *str = "goodbye, this cruel world              ";
+    char c = ' ';
 	int i = 0;
     char **output;
 	
@@ -165,5 +258,6 @@ int	main(void)
 	printf("string \"%s\" after ft_split:\n", str);
     while (output[i])
         printf("%s\n", output[i++]);
+	free_2d(output);
 }
 */
